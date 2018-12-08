@@ -1,0 +1,22 @@
+{
+  "name": "cgate-server",
+  "version": "0.1",
+  "slug": "cgate-server",
+  "description": "Addon to run Clipsal CGate server.",
+  "arch": ["amd64"],
+  "url": "http://neatherwab.github.com/hassio-addons",
+  "startup": "application",
+  "boot": "auto",
+  "timeout": 120,
+  "ports": {
+    "20023/tcp": 20023,
+    "20025/tcp": 20025
+  },
+  "map": ["config"],
+  "options": {
+	  "project": null
+  },
+  "schema": {
+	  "project": "str"
+          }
+}
