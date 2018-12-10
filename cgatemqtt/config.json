@@ -1,0 +1,39 @@
+{
+  "name": "cgatemqtt",
+  "version": "0.1",
+  "slug": "cgatemqtt",
+  "description": "Addon to proved gateway service to translate CGate to MQTT.",
+  "arch": ["amd64"],
+  "url": "http://neatherwab.github.com/hassio-addons",
+  "startup": "application",
+  "boot": "auto",
+  "timeout": 120,
+  "options": {
+	  "log_level": "INFO",
+	  "cgate": {
+		  "host": "127.0.0.1",
+		  "project": "HOME",
+		  "network": "254"
+	  },
+	  "mqtt": {
+		  "host": "127.0.0.1",
+		  "port": 1883,
+		  "user": "user",
+		  "password": "password"
+	  }
+  },
+  "schema": {
+          "log_level": "str",
+          "cgate": {
+                  "host": "str",
+                  "project": "str",
+                  "network": "str"
+          },
+          "mqtt": {
+                  "host": "str",
+                  "port": "port",
+                  "user": "str",
+                  "password": "str"
+          }
+  }
+}
