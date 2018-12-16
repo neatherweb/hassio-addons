@@ -1,6 +1,6 @@
 {
   "name": "cgatemqtt",
-  "version": "0.1",
+  "version": "0.2",
   "slug": "cgatemqtt",
   "description": "Addon to proved gateway service to translate CGate to MQTT.",
   "arch": ["amd64"],
@@ -20,6 +20,9 @@
 		  "port": 1883,
 		  "user": "user",
 		  "password": "password"
+	  },
+	  "lighting": {
+		  "fans": []
 	  }
   },
   "schema": {
@@ -34,6 +37,9 @@
                   "port": "port",
                   "user": "str",
                   "password": "str"
+          },
+	  "lighting": {
+                  "fans": ["int?"]
           }
   }
 }

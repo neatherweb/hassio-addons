@@ -11,7 +11,7 @@ MQTT_HOST=$(jq --raw-output '.mqtt.host' $CONFIG_PATH)
 MQTT_PORT=$(jq --raw-output '.mqtt.port' $CONFIG_PATH)
 MQTT_USER=$(jq --raw-output '.mqtt.user' $CONFIG_PATH)
 MQTT_PASSWORD=$(jq --raw-output '.mqtt.password' $CONFIG_PATH)
-
+FAN_LIST=$(jq --raw-output -c '.lighting.fans' $CONFIG_PATH)
 
 create_logging() {
 	(cat <<END
@@ -62,6 +62,9 @@ host = $MQTT_HOST
 port = $MQTT_PORT
 user = $MQTT_USER
 password = $MQTT_PASSWORD
+
+[lighting]
+fans = $FAN_LIST
 END
 ) > $SERVER_CONF
 }
