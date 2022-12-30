@@ -1,6 +1,6 @@
 {
   "name": "cgate-server",
-  "version": "0.1",
+  "version": "0.2",
   "slug": "cgate-server",
   "description": "Addon to run Clipsal CGate server.",
   "arch": ["amd64"],
