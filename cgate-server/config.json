@@ -6,6 +6,7 @@
   "arch": ["amd64"],
   "url": "http://neatherwab.github.com/hassio-addons",
   "startup": "application",
+  "init": false,
   "boot": "auto",
   "timeout": 120,
   "ports": {
